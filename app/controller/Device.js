@@ -10,7 +10,11 @@ Ext.define('App.controller.Device', {
         App.context.Device.on('pause', me.onDevicePaused, me);
     },
 
-    onDevicePaused: function (user) {
+    /**
+     * Display a message when simulating a PhoneGap event.
+     * Responds to the "pause" event on the Device context.
+     */
+    onDevicePaused: function () {
         Ext.Msg.alert('DEVICE PAUSED', 'Simulating a "pause" PhoneGap event.');
     }
 });
